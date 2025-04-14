@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Jogos do Dia</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div id="login-screen">
+    <h2>Jogos do Dia</h2>
+    <input type="password" id="senha" placeholder="Digite a senha" />
+    <button onclick="verificarSenha()">Entrar</button>
+  </div>
+
+  <div id="painel" style="display: none;">
+    <h1>Jogos do Dia</h1>
+    <form id="banner-form">
+      <label>Logomarca da empresa:</label>
+      <input type="file" id="logo" accept="image/*" /><br/>
+      <label>Fundo personalizado:</label>
+      <input type="file" id="fundo" accept="image/*" /><br/>
+      <label>Jogador do dia:</label>
+      <input type="file" id="jogador" accept="image/*" /><br/>
+      <button type="button" onclick="gerarBanner()">Gerar Banner</button>
+      <button type="button" onclick="baixarBanner()">Download</button>
+      <button type="button" onclick="limparCampos()">Limpar Campos</button>
+    </form>
+    <canvas id="bannerCanvas" width="1080" height="1080"></canvas>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
