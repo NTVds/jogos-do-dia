@@ -12,13 +12,8 @@
     <div class="config">
       <input type="file" id="logoInput" accept="image/*" />
       <input type="file" id="bgInput" accept="image/*" />
-      <input type="text" id="playerName" placeholder="Nome do jogador do dia" />
     </div>
-    <div class="buttons">
-      <button onclick="loadGames('main')">Principais Jogos</button>
-      <button onclick="loadGames('all')">Todos os Jogos</button>
-      <button onclick="generateBanner()">Gerar Banner</button>
-    </div>
+    <button onclick="generateBanner()">Gerar Banner</button>
     <canvas id="bannerCanvas" width="1080" height="1080"></canvas>
   </div>
   <script src="script.js"></script>
