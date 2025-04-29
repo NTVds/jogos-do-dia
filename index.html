@@ -1,21 +1,33 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Jogos do Dia</title>
-  <link rel="stylesheet" href="style.css" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>M3U Downloader</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <div class="container">
-    <h1>Jogos do Dia</h1>
-    <div class="config">
-      <input type="file" id="logoInput" accept="image/*" />
-      <input type="file" id="bgInput" accept="image/*" />
+    <div class="container">
+        <h1>📥 M3U Video Downloader</h1>
+        
+        <div class="input-section">
+            <label for="m3u-input">URL ou Arquivo M3U:</label>
+            <input type="text" id="m3u-url" placeholder="Cole a URL M3U">
+            <input type="file" id="m3u-file" accept=".m3u">
+        </div>
+
+        <div class="groups-section" id="groups-container" style="display: none;">
+            <h3>Selecione os Grupos:</h3>
+            <div id="groups-list"></div>
+            <button id="download-btn">Baixar Selecionados</button>
+        </div>
+
+        <div class="progress-section" id="progress-container" style="display: none;">
+            <h3>Progresso:</h3>
+            <div id="progress-bar"></div>
+            <p id="status">Aguardando...</p>
+        </div>
     </div>
-    <button onclick="generateBanner()">Gerar Banner</button>
-    <canvas id="bannerCanvas" width="1080" height="1080"></canvas>
-  </div>
-  <script src="script.js"></script>
+    <script src="script.js"></script>
 </body>
 </html>
